@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/selenium"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jxl"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/poi"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/commons-io-2.6"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+	<classpathentry kind="lib" path="drivers/testng-6.8-nobsh-guice.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
