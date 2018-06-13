@@ -32,20 +32,6 @@ public class FindShortestPath {
             	 findPath(n,path, nodeToFind);
              }
         }
-//        //查询左子树  
-//        if (!bLeafIsFound && root.left != null) {  
-//              
-//            findPath(root.left,path, nodeToFind);  
-//              
-//        }  
-//          
-//        //查询右子树  
-//        if (!bLeafIsFound && root.right != null) {  
-//              
-//            findPath(root.right, path, nodeToFind);  
-//              
-//        }  
-//          
         //如果没找到则弹栈  
         if (!bLeafIsFound) {  
               
@@ -80,33 +66,33 @@ public class FindShortestPath {
           
     }  
       
-    public TreeNode lowestCommonAncestor(ManyTreeNode root, TreeNode p, TreeNode q){  
+    public ManyTreeNode lowestCommonAncestor(ManyTreeNode root, TreeNode p, TreeNode q){  
           
         //发现目标节点则通过返回值标记该子树发现了某个目标节点  
         if (root == null || root.getData() == p || root.getData() == q) {  
               
-            return root.getData();  
+            return root;  
               
         }  
         for(ManyTreeNode n: root.getChildList()){
-        	TreeNode node =  lowestCommonAncestor(n, p, q);
+        	ManyTreeNode node =  lowestCommonAncestor(n, p, q);
         }
           return null;
     }  
       
-    public void findPathOfTwoNode(TreeNode root,TreeNode p, TreeNode q){  
+    public void findPathOfTwoNode(ManyTreeNode root,TreeNode p, TreeNode q){  
           
-        Stack<Integer> path1 = new Stack<Integer>();  
-        Stack<Integer> path2 = new Stack<Integer>();  
+        Stack<String> path1 = new Stack<String>();  
+        Stack<String> path2 = new Stack<String>();  
           
         //寻找两个路径的交点，即最小公共祖先  
-        TreeNode lca = lowestCommonAncestor(root, p, q);  
+        ManyTreeNode lca = lowestCommonAncestor(root, p, q);  
         //得到p节点的路径  
-        System.out.println("最小公共祖先节点" + lca.val + "和节点" + p.val + "之间的路径");  
+        System.out.println("最小公共祖先节点" + lca.getData().getNodeId() + "和节点" + p.getNodeId() + "之间的路径");  
         String s1 = findPath(lca, path1, p);  
         bLeafIsFound = false;//全局变量复位   
         //得到q节点的路径  
-        System.out.println("最小公共祖先节点" + lca.val + "和节点" + q.val + "之间的路径");  
+        System.out.println("最小公共祖先节点" + lca.getData().getNodeId() + "和节点" + q.getNodeId() + "之间的路径");  
         String s2 = findPath(lca, path2, q);  
         bLeafIsFound = false;//全局变量复位   
           
@@ -116,7 +102,7 @@ public class FindShortestPath {
           
         for (int i = 1; i < split.length; i++) {  
               
-            if (Integer.parseInt(split[i]) != lca.val) {  
+            if (split[i].equals(lca.getData().getNodeId())) {  
                   
                 s3 +="->" + split[i];  
             }  
