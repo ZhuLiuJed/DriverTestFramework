@@ -1,4 +1,4 @@
-package util;
+package tool;
 
 import java.io.*;
 import java.util.HashMap;
