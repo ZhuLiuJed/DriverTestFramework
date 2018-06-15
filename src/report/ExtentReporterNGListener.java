@@ -42,6 +42,7 @@ public class ExtentReporterNGListener implements IReporter{
         
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
+        extent.
         extent.setReportUsesManualConfiguration(true);
     }
     

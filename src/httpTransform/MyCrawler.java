@@ -1,12 +1,11 @@
 package httpTransform;
-import com.etoak.crawl.link.LinkFilter;
-import com.etoak.crawl.link.Links;
-import com.etoak.crawl.page.Page;
-import com.etoak.crawl.page.PageParserTool;
-import com.etoak.crawl.page.RequestAndResponseTool;
-import com.etoak.crawl.util.FileTool;
 import org.jsoup.select.Elements;
  
+
+
+import tool.FileTool;
+import interfaceManage.LinkFilter;
+
 import java.util.Set;
  
 public class MyCrawler {
@@ -78,3 +77,4 @@ public class MyCrawler {
             }
         }
     }
+}

@@ -70,11 +70,18 @@
 	    <artifactId>jsoup</artifactId>
 	    <version>1.11.3</version>
 	</dependency>
-			<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+		<!-- https://mvnrepository.com/artifact/commons-httpclient/commons-httpclient -->
 	<dependency>
-	    <groupId>org.apache.httpcomponents</groupId>
-	    <artifactId>httpclient</artifactId>
-	    <version>4.5.5</version>
+	    <groupId>commons-httpclient</groupId>
+	    <artifactId>commons-httpclient</artifactId>
+	    <version>3.1</version>
+	</dependency>
+
+			<!-- https://mvnrepository.com/artifact/com.googlecode.juniversalchardet/juniversalchardet -->
+	<dependency>
+	    <groupId>com.googlecode.juniversalchardet</groupId>
+	    <artifactId>juniversalchardet</artifactId>
+	    <version>1.0.3</version>
 	</dependency>
 		
 		  
