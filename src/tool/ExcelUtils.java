@@ -40,7 +40,7 @@ public class ExcelUtils {
                 Sheet sheet = workbook.createSheet(sheetName);  
                 return outputWorkbook(workbook, excelPath);  
             } else {  
-                System.out.println(excelPath + ":文件不存在.....");  
+                System.out.println(excelPath + ":不存在.....");  
             }  
             return false;  
         } catch (Exception e) {  

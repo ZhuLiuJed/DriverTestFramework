@@ -9,7 +9,7 @@
   </build>
   <dependencies>
 	  <dependency>
-	    <groupId>net.sourceforge.jexcelapi</groupId>
+	    <groupId>net.sourceforge.jexcelapi</groupId>r
 	    <artifactId>jxl</artifactId>
 	    <version>2.6.12</version>
 	  </dependency>
@@ -51,13 +51,17 @@
 	    <version>1.1.4</version>
 	    <scope>test</scope>
 	</dependency>
-		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-	<dependency>
+		<dependency>
 	    <groupId>com.aventstack</groupId>
 	    <artifactId>extentreports</artifactId>
-	    <version>3.0.0</version>
-	    <scope>provided</scope>
+	    <version>3.1.1</version>
 	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+	<dependency>
+	    <groupId>org.freemarker</groupId>
+	    <artifactId>freemarker</artifactId>
+	    <version>2.3.23</version>
+	</dependency>	
 		<!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
 	<dependency>
 	    <groupId>dom4j</groupId>
@@ -88,7 +92,12 @@
 	    <artifactId>java-ocr-api</artifactId>
 	    <version>[15,)</version>
 	</dependency>	
-	
+	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi-ooxml</artifactId>
+	    <version>3.17</version>
+	</dependency>
 	<dependency>  
 	    <groupId>net.java.dev.jna</groupId>  
 	    <artifactId>jna</artifactId>  
@@ -105,6 +114,7 @@
 	        </exclusion>  
 	    </exclusions>  
 	</dependency> 
+	
   </dependencies>
   
 </project>

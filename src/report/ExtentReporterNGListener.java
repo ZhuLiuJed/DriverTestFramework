@@ -22,6 +22,15 @@ import com.aventstack.extentreports.reporter.*;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+/**
+ *项目名称DriverTestFramework
+ *类名称ExtentReporterNGListener
+ *类描述：
+ *编辑人：邓文杰
+ *编辑时间：2018年7月9日下午7:54:39
+ *修改备注：
+ *
+ */
 public class ExtentReporterNGListener implements IReporter{
     
     private ExtentReports extent;
@@ -39,11 +48,11 @@ public class ExtentReporterNGListener implements IReporter{
         htmlReporter.config().setReportName("ExtentReports - Created by TestNG Listener");
         htmlReporter.config().setTestViewChartLocation(ChartLocation.BOTTOM);
         htmlReporter.config().setTheme(Theme.STANDARD);
-        
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
-        extent.
+//        extent.setReportUsesManualConfiguration(true);
         extent.setReportUsesManualConfiguration(true);
+        extent.flush();
     }
     
     private void buildTestNodes(IResultMap tests, Status status) {
